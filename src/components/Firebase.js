@@ -14,7 +14,6 @@ const firebaseConfig = {
   apiKey: "AIzaSyC-RvjDhDKe3E6yrzRDnolGtWIfK4GBszs",
   authDomain: "fb-clone-dev-68669.firebaseapp.com",
   projectId: "fb-clone-dev-68669",
-  databaseURL: "https://fb-clone-dev-68669-default-rtdb.asia-southeast1.firebasedatabase.app",
   storageBucket: "fb-clone-dev-68669.appspot.com",
   messagingSenderId: "537964779094",
   appId: "1:537964779094:web:ac8f4d4c16178e8f80cdf7",
