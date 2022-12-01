@@ -11,14 +11,14 @@ import {
 import { useEffect, useState } from "react";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyC-RvjDhDKe3E6yrzRDnolGtWIfK4GBszs",
-  authDomain: "fb-clone-dev-68669.firebaseapp.com",
-  projectId: "fb-clone-dev-68669",
-  storageBucket: "fb-clone-dev-68669.appspot.com",
-  messagingSenderId: "537964779094",
-  appId: "1:537964779094:web:ac8f4d4c16178e8f80cdf7",
+  apiKey: "AIzaSyCzfzISJ1peqqbV7NyJFFfxU2AVBbhw20s",
+  authDomain: "facetragram.firebaseapp.com",
+  projectId: "facetragram",
+  storageBucket: "facetragram.appspot.com",
+  messagingSenderId: "1030128475784",
+  appId: "1:1030128475784:web:bbf38dcfa306bce15c493d",
+  measurementId: "G-D7BCVCMGQM"
 };
-
 const firebase = initializeApp(firebaseConfig);
 
 export default firebase;
