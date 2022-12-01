@@ -1,0 +1,8 @@
+.cartoon{
+   display: flex;
+   width: '200px';
+   background: 'red';
+ }
+.primary{
+  background: 'red';
+}
