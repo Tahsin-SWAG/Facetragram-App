@@ -12,10 +12,11 @@ export default function Api_Post(){
 
 
     const fetch = () => {
-       axios.get("https://newsapi.org/v2/everything?q=bitcoin&apiKey=4c505d8e146442d1a89aa11ebcd0321f")
+
+       axios.get("https://gnews.io/api/v4/top-headlines?token=c00cb27c6b2c2bb3f88ffdf049b095f2&topic=breaking-news")
          .then((res) => {
-           const data = res.data.articles;
-            setall(data)          
+            setall(res.data.articles);    
+            console.log(res.data.articles);     
         })
         .catch((err) => {
             setError('Oops! Something went wrong please try again later');
@@ -42,17 +43,19 @@ export default function Api_Post(){
                       >
                           <CardHeader
                           avatar={
-                            <Avatar src={item.urlToImage}/>
+                            <Avatar src={item.image}/>
                           }
-                          title={item.author}
+                          title={item.source.name}
                           subheader={item.publishedAt}
                         />
                         <CardContent>
                           <Typography variant="body2" color="text.secondary">
-                            {item.content}
+                            {item.title}
                           </Typography>
+                          <hr></hr>
+                          <a style={{fontSize:'14px'}} href={item.source.url}>Learn more</a>
                         </CardContent>
-                        <CardMedia><img src={item.urlToImage} alt='' style={{width:'100%'}}/></CardMedia>
+                        <CardMedia><img src={item.image} alt='' style={{width:'100%'}}/></CardMedia>
                       </Card>
                         ))}
                 </Box>
