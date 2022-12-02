@@ -28,7 +28,6 @@ export default function Api_Post(){
             <Container sx={{ display: "flex", mt: 3, ml: { md: "-4.5%", sm: 0, xs: 0 } }}>
                 <Box>
                 <Box sx={{justifyContent:'center' , alignItems :"center" , display:'flex'}}>
-                <Button onClick={fetch}  sx={{margin:'auto'}}>Show Public Post</Button>
                 </Box>
         
                 <Box>
@@ -57,6 +56,7 @@ export default function Api_Post(){
                       </Card>
                         ))}
                 </Box>
+                <Button onClick={fetch}  sx={{margin:'auto'}} variant='contained'>Show Public Post</Button>
                 </Box>
             </Container>
         )
