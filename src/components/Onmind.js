@@ -2,7 +2,7 @@
 /* eslint-disable react/jsx-pascal-case */
 import Api_Post from "./Api_Post";
 import red from "../Images/animeBoy.jpg";
-import { useContext,  useEffect,  useState } from "react";
+import { useContext,  useState } from "react";
 import {Button,Typography,Card,CardContent,CardHeader,Avatar,CardMedia,IconButton} from "@mui/material";
 import { Box, Container } from "@mui/system";
 import {Profile} from "./Styled";
@@ -17,7 +17,7 @@ import FirstPost from "./FirstPost";
 
 export default function Onmind() {
   const [title , setTitle] = useState('');
-  const [main_data , setMain_data] = useState([{caption:[null] , picture:[]}]);
+  const [main_data , setMain_data] = useState([{caption:[] , picture:[]}]);
   const [phoco , setPhoco] = useState([]);
   const [time , setTime] = useState();
 
@@ -104,7 +104,7 @@ export default function Onmind() {
             </Button>
           </Box>
           <Box>
-        {main_data.length === 0 ? '' :  main_data.map((data , index) => (
+        {main_data.map((data , index) =>  (
                 <Card sx={{ maxWidth: 420 , mt:4}}>
                 <CardHeader
                   avatar={
@@ -123,7 +123,7 @@ export default function Onmind() {
                     {data.caption}
                   </Typography>
                 </CardContent>
-                <CardMedia height='194'> <img src={data.picture} style={{width:'100%'}}/></CardMedia>
+                <CardMedia height='194'><img src={data.picture} style={{width:'100%'}}/></CardMedia>
               </Card>
             ))}
         </Box>
